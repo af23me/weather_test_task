@@ -1,0 +1,12 @@
+name: weather_test_task
+services:
+  weather_web:
+    build: .
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "3000:3000"
+networks:
+  default:
+    name: weather_task_task
+    external: true
